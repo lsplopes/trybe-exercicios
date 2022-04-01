@@ -1,0 +1,29 @@
+div:hover {
+    border-style: solid;
+    border-color: blue;
+}
+div:nth-of-type(1) > h3{
+    background-color: green;
+    color: yellow;
+}
+div:nth-of-type(2) > h3{
+    background-color: blue;
+    color: red;
+}
+div:nth-of-type(3) > h3{
+    background-color: red;
+    color: black;
+    font-size: 300%;
+}
+div:nth-of-type(4) > h3{
+    background-color: aqua;
+    color: purple;
+}
+div:nth-of-type(5) > h3{
+    background-color: darkblue;
+    color: white;
+}
+div:nth-last-of-type(2n) > h3{
+    font-style: italic;
+    text-decoration: underline;
+}

@@ -1,3 +1,15 @@
-p {
-    color: blue;
+h1 {
+    text-align: center;
+}
+
+li:hover {
+    background-color: aqua;
+}
+
+li:active {
+    color: red;
+}
+
+ul, ol {
+    list-style: none;
 }
