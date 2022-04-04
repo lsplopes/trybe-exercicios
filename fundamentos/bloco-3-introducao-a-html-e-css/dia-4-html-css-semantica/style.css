@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(110, 110, 109);
+}
+.header {
+    background-color: aquamarine;
+    border-radius: 10px;
+    border: 3px rgb(84, 87, 139) solid;
+}
+.header h1 {
+    text-align: center;
+}
+.navigation li {
+    display: inline;
+    margin-right: 30px;
+}
+.main-content {
+    background-color: beige;
+    border-radius: 10px;
+    border: 3px rgb(84, 87, 139) solid;
+    display: inline-block;
+    width: 75%;
+}
+.estevideo {
+    background-color: aquamarine;
+    border-radius: 10px;
+    border: 3px rgb(84, 87, 139) solid;
+    display: inline;
+    padding: 10px;
+    float: right;
+    width: 20%;
+}
+.footer {
+    background-color: aquamarine;
+    border-radius: 10px;
+    border: 3px rgb(84, 87, 139) solid;
+    padding: 10px;
+}
+.foto {
+    width: 50%;
+}
