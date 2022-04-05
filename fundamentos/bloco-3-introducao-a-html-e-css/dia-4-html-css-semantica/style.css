@@ -2,7 +2,7 @@ body {
     background-color: rgb(110, 110, 109);
 }
 .header {
-    background-color: aquamarine;
+    background-color: darkgreen;
     border-radius: 10px;
     border: 3px rgb(84, 87, 139) solid;
 }
@@ -17,24 +17,45 @@ body {
     background-color: beige;
     border-radius: 10px;
     border: 3px rgb(84, 87, 139) solid;
+    width: 74%;
     display: inline-block;
-    width: 75%;
+}
+.video {
+    display: inline-block;
+    float: right;
+    width: 25%;
 }
 .estevideo {
-    background-color: aquamarine;
+    background-color: darkgreen;
     border-radius: 10px;
     border: 3px rgb(84, 87, 139) solid;
-    display: inline;
     padding: 10px;
-    float: right;
-    width: 20%;
+    text-align: center;
+    
+}
+.estafoto {
+    background-color: darkgreen;
+    border-radius: 10px;
+    border: 3px rgb(84, 87, 139) solid;
+    padding: 10px;
+    text-align: center;
 }
 .footer {
-    background-color: aquamarine;
+    background-color: darkgreen;
     border-radius: 10px;
     border: 3px rgb(84, 87, 139) solid;
     padding: 10px;
+    clear: both;
 }
 .foto {
     width: 50%;
+}
+.foto2 {
+    width: 80%;
+}
+h1 {
+    color: bisque;
+}
+h2 {
+    
 }
