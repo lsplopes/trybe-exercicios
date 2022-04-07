@@ -74,3 +74,37 @@ if (qtdimpar > 0) {
 else {
   console.log('nenhum valor impar encontrado')
 }
+
+// exercicio 7
+
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+let bigger = 0;
+
+for (let i = 0; i < numbers.length; i++) {
+  if (bigger < numbers[i]) {
+    bigger = numbers[i];
+  }
+}
+
+let smaller = bigger;
+
+for (let i = 0; i < numbers.length; i++) {
+  if (smaller > numbers[i]) {
+    smaller = numbers[i];
+  }
+}
+console.log(smaller);
+
+//achei que eu precisava saber primeiro qual era o maior pra aí poder comparar.. vendo o gabarito, refiz:
+
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+let smaller = numbers[0]; //assim ao invés de comparar a partir do maior numero, eu comparo numero por numero e escolho o menor
+
+for (let index = 1; index < numbers.length; index += 1) {
+  if (numbers[index] < smaller) {
+    smaller = numbers[index]
+  }
+}
+console.log(smaller);
