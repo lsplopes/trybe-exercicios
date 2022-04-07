@@ -113,11 +113,15 @@ console.log(smaller);
 
 let numbers = [];
 
-for (let index = 0; index < 25; index +=1) {
-  numbers.push(index+1);
+for (let index = 0; index < 25; index += 1) {
+  numbers.push(index + 1);
 }
 console.log(numbers);
 
 // diferença pro gabarito é que eu já comecei no zero e fui somando 1.. o gabarito começa com 1 e vai dando push no index direto... é mais eficaz com certeza.
 
-//
+// exercicio 9
+
+for (let index = 0; index < numbers.length; index += 1) {
+  console.log(numbers[index] / 2);
+}
