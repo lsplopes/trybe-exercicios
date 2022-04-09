@@ -43,23 +43,55 @@
 
 // EXERCICIO 3 - Considere o array de strings abaixo e escreva dois algoritmos: um que retorne a maior palavra deste array e outro que retorne a menor. Considere o número de caracteres de cada palavra.
 
-let array = ['java', 'javascript', 'python', 'html', 'css'];
-let bigger = 0;
-let biggerword;
-let smallestword;
+//let array = ['java', 'javascript', 'python', 'html', 'css'];
+//let bigger = 0;
+//let biggerword;
+//let smallestword;
+//
+//for (index = 0; index < array.length; index += 1) {
+//  if (array[index].length > bigger) {
+//    bigger = array[index].length;
+//    biggerword = array[index];
+//  }
+//}
+//let smallest = bigger;
+//for (index = 0; index < array.length; index += 1) {
+//  if (array[index].length < smallest) {
+//    smallest = array[index].length;
+//    smallestword = array[index];
+//  }
+//}
+//console.log("maior palavra é: " + biggerword);
+//console.log("menor palavra é: " + smallestword);
 
-for (index = 0; index < array.length; index += 1) {
-  if (array[index].length > bigger) {
-    bigger = array[index].length;
-    biggerword = array[index];
+// EXERCICIO 4 - 4- Um número primo é aquele divisível apenas por 1 e por ele mesmo. Sabendo disso, escreva um algoritmo que retorne o maior número primo entre 0 e 50.
+//###############TENTATIVA 1
+
+let apartirDe = 20000;
+for (contPrimo = 0; contPrimo < apartirDe; contPrimo += 1) {
+let arrayDePrimo = [apartirDe - contPrimo];
+let contador = 0;
+let test1 = 0;
+let test2 = 0;
+for (index = 1; index <= arrayDePrimo[0]; index += 1) {
+  if (arrayDePrimo[arrayDePrimo.length - 1] === 1) {
+    break
+  }
+  else {
+    arrayDePrimo.push(arrayDePrimo[0] - index);
+    test1 = arrayDePrimo[0];
+    test2 = arrayDePrimo[index];
+    if (test1 % test2 === 0) {
+      contador += 1;
+      if (contador > 1) {
+        contador = 0;
+        break
+      }
+    }
   }
 }
-let smallest = bigger;
-for (index = 0; index < array.length; index += 1) {
-  if (array[index].length < smallest) {
-    smallest = array[index].length;
-    smallestword = array[index];
-  }
+if (contador === 1) {
+  console.log("o maior primo é: " + arrayDePrimo[0]);
+  break
 }
-console.log("maior palavra é: " + biggerword);
-console.log("menor palavra é: " + smallestword);
+}
