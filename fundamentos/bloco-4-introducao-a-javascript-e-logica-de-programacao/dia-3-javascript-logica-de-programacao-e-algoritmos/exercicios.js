@@ -67,7 +67,7 @@
 // EXERCICIO 4 - 4- Um número primo é aquele divisível apenas por 1 e por ele mesmo. Sabendo disso, escreva um algoritmo que retorne o maior número primo entre 0 e 50.
 //###############TENTATIVA 1
 
-let apartirDe = 50;
+let apartirDe = 4;
 for (contPrimo = 0; contPrimo < apartirDe; contPrimo += 1) {
 let arrayDePrimo = [apartirDe - contPrimo];
 let contador = 0;
