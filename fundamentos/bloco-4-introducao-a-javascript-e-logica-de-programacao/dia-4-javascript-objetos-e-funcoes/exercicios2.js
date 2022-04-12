@@ -74,19 +74,31 @@
 
 //EXERCICIO 5
 
-function fuMaisRepetido(array) {
-  let maisRepetido = 0;
-  for (let indice in array) {
-    let contador = 0;
-    for (let indice2 in array) {
-      if (array[indice2] === array[indice]) {
-        contador += 1;
-      }
-    }
-    if (contador > maisRepetido) {
-      maisRepetido = indice;
-    }
+//function fuMaisRepetido(array) {
+//  let maisRepetido = 0;
+//  for (let indice in array) {
+//    let contador = 0;
+//    for (let indice2 in array) {
+//      if (array[indice2] === array[indice]) {
+//        contador += 1;
+//      }
+//    }
+//    if (contador > maisRepetido) {
+//      maisRepetido = indice;
+//    }
+//  }
+//return array[maisRepetido];
+//}
+//console.log(fuMaisRepetido([2, 3, 2, 5, 8, 2, 3]));
+
+// EXERCICIO 6
+
+function somaInferiores (numero) {
+  let somatorio = numero;
+  for (index = 1; index < numero; index += 1) {
+    somatorio += numero - index;
   }
-return array[maisRepetido];
+return somatorio;
 }
-console.log(fuMaisRepetido([2, 3, 2, 5, 8, 2, 3]));
+
+console.log(somaInferiores(5));
