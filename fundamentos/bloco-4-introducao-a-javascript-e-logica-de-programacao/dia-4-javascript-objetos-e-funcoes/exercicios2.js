@@ -60,14 +60,33 @@
 
 //EXERCICIO 4
 
-function maiorNomeDado(arrayDeNomes) {
-  let indiceMaiorNome = 0;
-  for (let indice in arrayDeNomes) {
-    if (arrayDeNomes[indiceMaiorNome].length < arrayDeNomes[indice].length) {
-      indiceMaiorNome = indice;
+//function maiorNomeDado(arrayDeNomes) {
+//  let indiceMaiorNome = 0;
+//  for (let indice in arrayDeNomes) {
+//    if (arrayDeNomes[indiceMaiorNome].length < arrayDeNomes[indice].length) {
+//      indiceMaiorNome = indice;
+//    }
+//  }
+//return arrayDeNomes[indiceMaiorNome];
+//}
+//
+//console.log(maiorNomeDado(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
+//EXERCICIO 5
+
+function fuMaisRepetido(array) {
+  let maisRepetido = 0;
+  for (let indice in array) {
+    let contador = 0;
+    for (let indice2 in array) {
+      if (array[indice2] === array[indice]) {
+        contador += 1;
+      }
+    }
+    if (contador > maisRepetido) {
+      maisRepetido = indice;
     }
   }
-return arrayDeNomes[indiceMaiorNome];
+return array[maisRepetido];
 }
-
-console.log(maiorNomeDado(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+console.log(fuMaisRepetido([2, 3, 2, 5, 8, 2, 3]));
