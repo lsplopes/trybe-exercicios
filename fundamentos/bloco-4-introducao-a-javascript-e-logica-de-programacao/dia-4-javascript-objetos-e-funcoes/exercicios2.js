@@ -93,12 +93,31 @@
 
 // EXERCICIO 6
 
-function somaInferiores (numero) {
-  let somatorio = numero;
-  for (index = 1; index < numero; index += 1) {
-    somatorio += numero - index;
-  }
-return somatorio;
-}
+//function somaInferiores (numero) {
+//  let somatorio = numero;
+//  for (index = 1; index < numero; index += 1) {
+//    somatorio += numero - index;
+//  }
+//return somatorio;
+//}
+//
+//console.log(somaInferiores(5));
 
-console.log(somaInferiores(5));
+// EXERCICIO 7
+
+
+function verificaFimPalavra(word, ending) {
+  let backWord = word.split('').reverse();
+  let backEnding = ending.split('').reverse();
+  let verification = false;
+  for (index = 0; index < ending.length; index += 1) {
+    if (backEnding[index] === backWord[index]) {
+      verification = true;
+    }
+    else {
+      break
+    }
+  }
+  console.log(verification);
+}
+verificaFimPalavra('trybe', 'by');
