@@ -66,10 +66,20 @@
       //2 - Adicione a tag main com a classe main-content como filho da tag body ;
 
       const elementmain = document.createElement('main');
-      elementmain.class = 'main-content';
+      elementmain.className = 'main-content';
       elementbody.appendChild(elementmain);
 
-      
+      //3 - Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+
+      const centerSection = document.createElement('section');
+      centerSection.className = 'center-content';
+      elementmain.appendChild(centerSection);
+
+      //4 - Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+
+      const primeiroParagrafo = document.createElement('p');
+      primeiroParagrafo.innerText = 'Primeiro paragrafo';
+      centerSection.appendChild(primeiroParagrafo);
     </script>
   </body>
 </html>
