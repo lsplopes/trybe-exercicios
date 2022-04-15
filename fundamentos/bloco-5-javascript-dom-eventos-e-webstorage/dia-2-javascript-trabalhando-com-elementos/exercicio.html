@@ -141,6 +141,12 @@
 
       centerSection.parentElement.style.backgroundColor = "green";
 
+      //x6 - Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+
+      let numDez = document.getElementsByTagName('li');
+      let removeDez = listaNO.removeChild(numDez[9]);
+      removeDez = listaNO.removeChild(numDez[8]);
+
     </script>
   </body>
 </html>
