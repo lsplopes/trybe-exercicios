@@ -71,3 +71,15 @@ function renderizaholidays() {
   })
 }
 renderizaholidays();
+
+// EXERCICIO 4 - Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão com o nome "Sexta-feira".
+//Adicione a este botão o ID "btn-friday" .
+//Adicione este botão como filho/filha da tag <div> com classe "buttons-container" . 
+
+function createFridayButton () {
+  const fridayButton = document.createElement('button');
+  fridayButton.id = 'btn-friday';
+  fridayButton.innerText = 'Sexta-Feira';
+  buttonsContainer.appendChild(fridayButton);
+}
+createFridayButton();
