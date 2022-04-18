@@ -102,5 +102,4 @@ function renderizaFriday() {
     }
   })
 }
-
 renderizaFriday();
