@@ -125,3 +125,35 @@ function zoomOutDays() {
   } )
 }
 zoomOutDays();
+
+//EXERCICIO 7 - Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
+//O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
+
+function insertTask(newTask) {
+let myTasks = document.querySelector('.my-tasks');
+let addTask = document.createElement('span');
+addTask.className = "my-tasks";
+addTask.innerHTML = newTask;
+myTasks.appendChild(addTask);
+}
+insertTask('exercicios dia 5.3');
+
+
+
+//EXERCICIO BONUS - Vamos adicionar compromissos ao seu calendário? Implemente uma função que, ao digitar um compromisso na caixa de texto "COMPROMISSOS", adiciona o item à lista "MEUS COMPROMISSOS" ao clicar no botão "ADICIONAR".
+//Se nenhum caractere for inserido no campo input , a função deve retornar um alert com uma mensagem de erro ao clicar em "ADICIONAR".
+//Ao pressionar a tecla "enter" o evento também deverá ser disparado.
+//Dica - Propriedade: key .
+let taskImputplace = document.querySelector('#task-input');
+let taskImputButton = document.querySelector('#btn-add');
+
+taskImputButton.addEventListener('click', criaTask);
+
+function criaTask() {
+  let myTasks = document.querySelector('.my-tasks');
+  let addTask = document.createElement('span');
+  addTask.className = "my-tasks";
+  addTask.innerHTML = taskImputplace.value;
+  myTasks.appendChild(addTask);
+}
+
