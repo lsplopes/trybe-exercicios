@@ -138,6 +138,21 @@ myTasks.appendChild(addTask);
 }
 insertTask('exercicios dia 5.3');
 
+//EXERCICIO 8 - Implemente uma função que adiciona uma legenda com cor para a tarefa criada no exercício anterior. Esta função deverá receber como parâmetro uma string ("cor") e criar dinamicamente um elemento de tag <div> com a classe task .
+//O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada.
+//O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
+
+function insertLegend(newLegend) {
+  let myTasks = document.querySelector('.my-tasks');
+  let legenda = document.createElement('div');
+  legenda.className = "task";
+  legenda.style.backgroundColor = newLegend;
+  myTasks.appendChild(legenda);
+}
+insertLegend('lightblue');
+
+
+
 
 
 //EXERCICIO BONUS - Vamos adicionar compromissos ao seu calendário? Implemente uma função que, ao digitar um compromisso na caixa de texto "COMPROMISSOS", adiciona o item à lista "MEUS COMPROMISSOS" ao clicar no botão "ADICIONAR".
