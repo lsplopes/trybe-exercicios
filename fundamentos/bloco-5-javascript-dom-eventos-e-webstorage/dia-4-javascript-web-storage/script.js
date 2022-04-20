@@ -53,7 +53,8 @@ function updateFontColor() {
     texto[1].style.color = "white";
   } 
   else {
-    texto.style.color = "white";
+    texto[0].style.color = "white";
+    texto[1].style.color = "white";
     localStorage.setItem('fontColor', "white");    
   }
 }
@@ -73,3 +74,51 @@ blackWhiteButton.addEventListener('click', function(evento) {
     localStorage.setItem('fontColor', "black");
   }
 })
+
+// TAMANHO DA FONTE
+
+updateFontSize();
+
+function updateFontSize() {
+  let texto = document.querySelectorAll('.texto');
+  let fontSizeStorage = localStorage.getItem("fontSize");
+  if (fontSizeStorage === "80%") {
+    texto[0].style.fontSize = "120%";
+    texto[1].style.fontsize = "80%";
+  } 
+  else if (fontSizeStorage === "100%") {
+    texto[0].style.fontSize = "140%";
+    texto[1].style.fontSize = "100%";
+  } 
+  else if (fontSizeStorage === "120%") {
+    texto[0].style.fontSize = "160%";
+    texto[1].style.fontSize = "120%";
+  } 
+  else {
+    texto[0].style.fontSize = "140%";
+    texto[1].style.fontSize = "100%";
+    localStorage.setItem('fontSize', "100%");    
+  }
+}
+
+let sizeButtons = document.querySelector('#sizeButtons');
+sizeButtons.addEventListener('click', function(evento) {
+  if (evento.target.id === "smallSize") {
+    let redimensionarTexto = document.querySelectorAll('.texto');
+    redimensionarTexto[0].style.fontSize = "120%";
+    redimensionarTexto[1].style.fontSize = "80%";
+    localStorage.setItem('fontSize', "80%");
+  }
+  else if (evento.target.id === "mediumSize") {
+    let redimensionarTexto = document.querySelectorAll('.texto');
+    redimensionarTexto[0].style.fontSize = "140%";
+    redimensionarTexto[1].style.fontSize = "100%";
+    localStorage.setItem('fontSize', "100%");
+  }
+  else if (evento.target.id === "largeSize") {
+    let redimensionarTexto = document.querySelectorAll('.texto');
+    redimensionarTexto[0].style.fontSize = "160%";
+    redimensionarTexto[1].style.fontSize = "120%";
+    localStorage.setItem('fontSize', "120%");
+  }
+});
