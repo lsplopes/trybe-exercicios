@@ -170,3 +170,61 @@ lineHeightButtons.addEventListener('click', function(evento) {
     localStorage.setItem('lineHeight', "160%");
   }
 });
+
+// TIPO DE FONTE
+
+updateFontFamily();
+
+function updateFontFamily() {
+  let textFont = document.querySelectorAll('.texto');
+  let textFontStorage = localStorage.getItem("textFamilyFont");
+  if (textFontStorage === "Arial") {
+    textFont[0].style.fontFamily = "Arial";
+    textFont[1].style.fontFamily = "Arial";
+  } 
+  else if (textFontStorage === "Monospace") {
+    textFont[0].style.fontFamily = "Monospace";
+    textFont[1].style.fontFamily = "Monospace";
+  } 
+  else if (textFontStorage === "Verdana") {
+    textFont[0].style.fontFamily = "Verdana";
+    textFont[1].style.fontFamily = "Verdana";    
+  } 
+  else {
+    textFont[0].style.fontFamily = "Arial";
+    textFont[1].style.fontFamily = "Arial";
+    localStorage.setItem('textFamilyFont', "Arial");
+  }
+}
+
+
+
+
+let fontFamilyButton = document.getElementById('fontFamaly');
+
+fontFamilyButton.addEventListener('click', function() {
+  let currentFont = document.querySelectorAll('.texto');
+  if (currentFont[1].style.fontFamily === "Arial") {
+    let redimensionarTexto = document.querySelectorAll('.texto');
+    redimensionarTexto[0].style.fontFamily = "Monospace";
+    redimensionarTexto[1].style.fontFamily = "Monospace";
+    localStorage.setItem('textFamilyFont', "Monospace");
+    console.log('arial mono')
+  }
+  else if (currentFont[1].style.fontFamily === "monospace") {
+    let redimensionarTexto = document.querySelectorAll('.texto');
+    redimensionarTexto[0].style.fontFamily = "Verdana";
+    redimensionarTexto[1].style.fontFamily = "Verdana";
+    localStorage.setItem('textFamilyFont', "Verdana");
+    console.log('mono verda')
+  }
+  else if (currentFont[1].style.fontFamily === "Verdana") {
+    let redimensionarTexto = document.querySelectorAll('.texto');
+    redimensionarTexto[0].style.fontFamily = "Arial";
+    redimensionarTexto[1].style.fontFamily = "Arial";
+    localStorage.setItem('textFamilyFont', "Arial");
+    console.log('verda ari')
+  }
+  else {
+    console.log('UAI')}
+})
