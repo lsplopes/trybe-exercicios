@@ -1,12 +1,14 @@
 .buttonsSections {
   display: inline-block;
-  border: 10px solid red;
-  margin: 20px;
+  padding: 5px;
+  margin: 10px;
   vertical-align: middle;
 }
 
 .buttons {
-  border: 2px solid green;
+  border: 2px solid darkblue;
+  text-align: center;
+  background-color: darkslategrey;
 }
 
 .blockButtons {
@@ -15,3 +17,16 @@
   width: 100%;
 }
 
+footer {
+  vertical-align: bottom;
+}
+
+header {
+  border: 2px solid darkblue;
+  text-align: center;
+  background-color: darkslategrey;
+}
+
+#cabecaPe {
+  display: block;
+}
