@@ -1,4 +1,4 @@
-
+// COR DO FUNDO
 updateBodyColor();
 
 function updateBodyColor() {
@@ -20,7 +20,6 @@ function updateBodyColor() {
 }
 
 const bodyPaintButton = document.getElementById('backColor');
-
 bodyPaintButton.addEventListener('click', function() {
   let body = document.getElementById('corpo');
   if (body.style.backgroundColor === "black") {
@@ -38,3 +37,39 @@ bodyPaintButton.addEventListener('click', function() {
   
 })
 
+// COR DAS LETRAS
+
+updateFontColor();
+
+function updateFontColor() {
+  let texto = document.querySelectorAll('.texto');
+  let fontColorStorage = localStorage.getItem("fontColor");
+  if (fontColorStorage === "black") {
+    texto[0].style.color = "black";
+    texto[1].style.color = "black";
+  } 
+  else if (fontColorStorage === "white") {
+    texto[0].style.color = "white";
+    texto[1].style.color = "white";
+  } 
+  else {
+    texto.style.color = "white";
+    localStorage.setItem('fontColor', "white");    
+  }
+}
+
+let blackWhiteButton = document.querySelector('#BWBut');
+blackWhiteButton.addEventListener('click', function(evento) {
+  if (evento.target.id === "textWhite") {
+    let colorirTexto = document.querySelectorAll('.texto');
+    colorirTexto[0].style.color = "white";
+    colorirTexto[1].style.color = "white";
+    localStorage.setItem('fontColor', "white");
+  }
+  else if (evento.target.id === "textBlack") {
+    let colorirTexto = document.querySelectorAll('.texto');
+    colorirTexto[0].style.color = "black";
+    colorirTexto[1].style.color = "black";
+    localStorage.setItem('fontColor', "black");
+  }
+})
