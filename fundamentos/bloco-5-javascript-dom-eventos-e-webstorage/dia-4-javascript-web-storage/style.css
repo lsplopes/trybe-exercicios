@@ -1,0 +1,21 @@
+.texto {
+  color: white;
+}
+
+.buttonsSections {
+  display: inline-block;
+  border: 10px solid red;
+  margin: 20px;
+  vertical-align: middle;
+}
+
+.buttons {
+  border: 2px solid green;
+}
+
+.blockButtons {
+  display: block;
+  margin: 2px;
+  width: 100%;
+}
+
