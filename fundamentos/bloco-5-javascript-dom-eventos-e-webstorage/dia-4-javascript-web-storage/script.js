@@ -122,3 +122,51 @@ sizeButtons.addEventListener('click', function(evento) {
     localStorage.setItem('fontSize', "120%");
   }
 });
+
+// ESPAÇAMENTO DAS LINHAS
+
+updateLineHeight();
+
+function updateLineHeight() {
+  let texto = document.querySelectorAll('.texto');
+  let lineHeigthStorage = localStorage.getItem("lineHeight");
+  if (lineHeigthStorage === "101%") {
+    texto[0].style.lineHeight = "160%";
+    texto[1].style.lineHeight = "101%";
+  } 
+  else if (lineHeigthStorage === "130%") {
+    texto[0].style.lineHeight = "140%";
+    texto[1].style.lineHeight = "130%";
+  } 
+  else if (lineHeigthStorage === "160%") {
+    texto[0].style.lineHeight = "160%";
+    texto[1].style.lineHeight = "160%";
+  } 
+  else {
+    texto[0].style.lineHeight = "140%";
+    texto[1].style.lineHeight = "130%";
+    localStorage.setItem('lineHeight', "130%");    
+  }
+}
+
+let lineHeightButtons = document.querySelector('#lineHeightButton');
+lineHeightButtons.addEventListener('click', function(evento) {
+  if (evento.target.id === "lineHeigthSmall") {
+    let redimensionarTexto = document.querySelectorAll('.texto');
+    redimensionarTexto[0].style.lineHeight = "160%";
+    redimensionarTexto[1].style.lineHeight = "101%";
+    localStorage.setItem('lineHeight', "101%");
+  }
+  else if (evento.target.id === "lineHeigthMedium") {
+    let redimensionarTexto = document.querySelectorAll('.texto');
+    redimensionarTexto[0].style.lineHeight = "140%";
+    redimensionarTexto[1].style.lineHeight = "130%";
+    localStorage.setItem('lineHeight', "130%");
+  }
+  else if (evento.target.id === "lineHeigthLarge") {
+    let redimensionarTexto = document.querySelectorAll('.texto');
+    redimensionarTexto[0].style.lineHeight = "160%";
+    redimensionarTexto[1].style.lineHeight = "160%";
+    localStorage.setItem('lineHeight', "160%");
+  }
+});
