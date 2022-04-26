@@ -1,5 +1,7 @@
-let submitButton = document.getElementById('submitButton');
+//let submitButton = document.getElementById('submitButton');
+//
+//submitButton.addEventListener('click', function(evento) {
+//  evento.preventDefault();
+//})
 
-submitButton.addEventListener('click', function(evento) {
-  evento.preventDefault();
-})
+

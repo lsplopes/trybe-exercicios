@@ -11,46 +11,51 @@
     <h1>TrybeTrip - Form</h1>
   </header>
   <form action="" method="get">
-    <label for="nome">Nome Completo: 
-      <input type="text" name="nome" placeholder="Digite aqui seu nome completo" id="nome" minlength="10" maxlength="40">
-    </label>
+
+    <label for="nome">Nome Completo:</label>
+    <input type="text" name="nome" placeholder="Digite aqui seu nome completo" id="nome" minlength="10" maxlength="40">
     <br>
-    <label for="email">E-mail: 
-      <input type="email" name="email" id="email" placeholder="Digite aqui seu email" minlength="10" maxlength="50">
-    </label>
+
+    <label for="email">E-mail:</label>
+    <input type="email" name="email" id="email" placeholder="Digite aqui seu email" minlength="10" maxlength="50">
     <br>
+
     <p>Destino Preferido:</p>
-    <label for="destino1">
-      <input type="radio" name="ci" id="destino1">Cidade
-    </label>
-    <label for="destino2">
-      <input type="radio" name="ca" id="destino2">Campo
-    </label>
-    <label for="destino3">
-      <input type="radio" name="pr" id="destino3">Praia
-    </label>
-    <label for="destino4">
-      <input type="radio" name="mo" id="destino4">Montanhas
-    </label>
+
+    <label for="destino1"></label>
+    <input type="radio" name="dest" id="destino1">Cidade
+
+    <label for="destino2"></label>
+    <input type="radio" name="dest" id="destino2">Campo
+
+    <label for="destino3"></label>
+    <input type="radio" name="dest" id="destino3">Praia
+
+    <label for="destino4"></label>
+    <input type="radio" name="dest" id="destino4">Montanhas
     <br>
-    <label for="porque">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?<br>
-      <textarea name="motivos" id="" cols="30" rows="10" maxlength="500" id="porque"></textarea>
-    </label>
+
+    <label for="porque">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
     <br>
-    <label for="data"> Qual a melhor data para realizar sua viagem?
-      <br>
-      <input type="date" name="data" id="data">
-    </label>
+    <textarea name="motivos" id="textarea" cols="30" rows="10" maxlength="500" id="porque"></textarea>
     <br>
-    <label for="promo">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe? 
-      <input type="checkbox" name="promo" id="promo">
-    </label>
+
+    <label for="data"> Qual a melhor data para realizar sua viagem?</label>
     <br>
-    <label for="concordoImagens">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros. 
-      <input type="checkbox" name="concImag" id="concordoImagens">
-    </label>
+    <input type="date" name="data" id="data">
     <br>
+
+    <label for="promo">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+    <input type="checkbox" name="promo" id="promo">
+    <br>
+
+    <label for="concordoImagens">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+    <input type="checkbox" name="concImag" id="concordoImagens">
+    <br>
+
     <button type="submit" id="submitButton">Enviar</button>
+    <button type="reset" id="eraseButton">Apagar</button>
+
   </form>
   <script src="/script.js"></script>
 </body>
