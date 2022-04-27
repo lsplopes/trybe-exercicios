@@ -52,3 +52,5 @@ function validadorDeTextos() {
   }
 }
 
+let dateButton = document.getElementById('data').DatePickerX.init();
+
