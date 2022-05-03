@@ -22,7 +22,6 @@ header {
   display: flex;
   background-color: dimgray;
   align-items: center;
-  align-content: center;
   justify-content: space-around;  
 }
 
@@ -30,6 +29,7 @@ header {
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  width: 100%;
 }
 
 #techs {
@@ -44,10 +44,9 @@ header {
 
 .gallery-box {
   background-color: lightgray;
-  border-radius: 10px;
-  box-shadow: 1px 1px 5px;
-  height: 200px;
-  align-content: center;
+  border-radius: 15px;
+  box-shadow: 2px 3px 5px;
+  height: 220px;
   align-items: center;
   justify-content: center;
   margin: 5px;
@@ -60,6 +59,7 @@ h1 {
 
 h3 {
   color: white;
+  text-decoration: underline;
 }
 h4 {
   text-align: center;
