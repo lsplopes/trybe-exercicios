@@ -19,7 +19,9 @@
   <script>
     const verifyNumbers = (value1, value2) => {
       if (value1 === '' || value2 === '') {
-        throw new Error('Um dos valores não foi preenchido');
+        throw new Error('Um ou os dois valores não foi preenchido');
+      } else if (value1 !== Number || value2 !== Number) {
+        throw new Error('Um ou os dois valores não é numérico');
       }
     };
 
