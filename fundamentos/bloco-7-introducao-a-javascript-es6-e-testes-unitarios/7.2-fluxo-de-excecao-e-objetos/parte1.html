@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang='pt-BR'>
+
 <head>
   <meta charset='UTF-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>Calculadora</title>
 </head>
+
 <body>
   <p>Informe dois números para realizar a soma:</p>
   <label for='value1'>Valor 1:</label>
@@ -15,13 +17,24 @@
   <button id='button'>Somar</button>
   <p id='result'></p>
   <script>
+    const verifyNumbers = (value1, value2) => {
+      if (value1 === '' || value2 === '') {
+        throw new Error('Um dos valores não foi preenchido');
+      }
+    };
+
     function sum() {
-      const value1 = document.getElementById('value1').value;
-      const value2 = document.getElementById('value2').value;
-      const result = parseInt(value1) + parseInt(value2);
-      document.getElementById('result').innerHTML = `Resultado: ${result}`;
-      document.getElementById('value1').value = '';
-      document.getElementById('value2').value = '';
+      try {
+        const value1 = document.getElementById('value1').value;
+        const value2 = document.getElementById('value2').value;
+        verifyNumbers(value1, value2);
+        const result = parseInt(value1) + parseInt(value2);
+        document.getElementById('result').innerHTML = `Resultado: ${result}`;
+        document.getElementById('value1').value = '';
+        document.getElementById('value2').value = '';
+      } catch (error) {
+        alert(`Erro: ${error.message}`);
+      }
     }
     window.onload = () => {
       const button = document.getElementById('button');
@@ -29,4 +42,5 @@
     }
   </script>
 </body>
+
 </html>
