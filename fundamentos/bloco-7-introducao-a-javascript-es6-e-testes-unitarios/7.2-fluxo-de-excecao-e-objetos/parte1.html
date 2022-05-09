@@ -37,6 +37,10 @@
         document.getElementById('value2').value = '';
       } catch (error) {
         alert(`Erro: ${error.message}`);
+        document.getElementById('result').innerHTML = '';
+      }finally {
+        document.getElementById('value1').value = '';
+        document.getElementById('value2').value = '';
       }
     }
     window.onload = () => {
