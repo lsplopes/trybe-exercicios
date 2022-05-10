@@ -66,8 +66,6 @@ const valueByPosition = (lesson, position) => {
 const verifyPair = (objeto, chave, valor) => {
   const arrayObject = Object.entries(objeto);
   for (let index = 0; index < arrayObject.length; index += 1) {
-    console.log(arrayObject[index][0]);
-    console.log(arrayObject[index][1]);
     if (arrayObject[index][0] === chave && arrayObject[index][1] === valor) {
       result = true;
       break;
@@ -77,5 +75,5 @@ const verifyPair = (objeto, chave, valor) => {
   }
   return result
 }
-// console.log(verifyPair(lesson3, 'turno', 'noite'));
+console.log(verifyPair(lesson3, 'turno', 'noite'));
 console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
