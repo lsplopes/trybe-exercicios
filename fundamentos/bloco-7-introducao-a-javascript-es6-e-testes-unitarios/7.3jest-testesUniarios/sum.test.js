@@ -1,4 +1,6 @@
-const { sum, myRemove } = require('./sum');
+const { sum, myRemove, myFizzBuzz, encode, decode } = require('./sum');
+
+//EXERCICIO 1
 
 describe('Testes da função sum', () => {
 
@@ -19,6 +21,8 @@ describe('Testes da função sum', () => {
   });
 })
 
+//EXERCICIO 2
+
 describe('Testes da função myRemove', () => {
 
   it('Testa se o array [1, 2, 3, 4] retorna o array esperado', () => {
@@ -33,3 +37,52 @@ describe('Testes da função myRemove', () => {
     expect(myRemove([1, 2, 3, 4], 5)).toEqual([1, 2, 3, 4]);
   })
 });
+
+// EXERCICIO 3
+
+describe('Testes da função myFizzBuzz', () => {
+
+  it('Verifica se uma chamada com um número divisível por 3 e 5  o retorno é o esperado', () => {
+    expect(myFizzBuzz(15)).toBe('fizzbuzz');
+  })
+
+  it('Verifica se uma chamada com um número divisível apenas por 3 o retorno é o esperado', () => {
+    expect(myFizzBuzz(3)).toBe('fizz');
+  })
+
+  it('Verifica se uma chamada com um número divisível apenas por 5 o retorno é o esperado', () => {
+    expect(myFizzBuzz(5)).toBe('buzz');
+  })
+
+  it('Verifica se uma chamada com um parametro que não é um numero o retorno é o esperado', () => {
+    expect(myFizzBuzz('vaca')).toBe(false);
+  })
+});
+
+// EXERCICIO 4
+
+describe('Testes das funções encode e decode', () => {
+  //requisito1
+  it('Verifica se encode e decode são funções', () => {
+    expect(typeof encode).toBe('function');
+    expect(typeof decode).toBe('function');
+  });
+  //requisito2
+  it ('verifica se Para a função encode teste se as vogais a, e, i, o, u são convertidas em 1, 2, 3, 4 e 5, respectivamente', () => {
+    expect(encode('aeiou')).toBe('12345');
+  })
+  //requisito3
+  it ('verifica se Para a função decode teste se os números 1, 2, 3, 4 e 5 são convertidos nas vogais a, e, i, o, u, respectivamente', () => {
+    expect(decode('12345')).toBe('aeiou');
+  })
+  //requisito4
+  it ('verifica se as demais letras/números não são convertidos para cada caso', () => {
+    expect(decode('6')).toBe('6');
+    expect(encode('g')).toBe('g');
+  })
+  //requisito5
+  it ('verifica se a string que é retornada pelas funções têm o mesmo número de caracteres que a string passada como parâmetro', () => {
+    expect(encode('Lucas').length).toEqual(5);
+    expect(decode('12345').length).toEqual(5);
+  })
+})
