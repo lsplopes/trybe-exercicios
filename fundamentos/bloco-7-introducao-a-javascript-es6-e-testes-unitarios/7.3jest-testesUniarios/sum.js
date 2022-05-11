@@ -97,4 +97,20 @@ function techList(arrayTech, name) {
 }
 }
 
-module.exports = { sum, myRemove, myFizzBuzz, encode, decode, techList };
+//EXERCICIO 6
+
+function hydrate(str) {
+  numbers = str.match(/\d/g);
+  let contador = 0;
+  for (let index in numbers) {
+    contador += parseFloat(numbers[index]);
+  }
+  if (contador > 1) {
+    return contador + ' copos de água'
+  }
+  else {
+    return contador + ' copo de água'
+  }
+}
+
+module.exports = { sum, myRemove, myFizzBuzz, encode, decode, techList, hydrate };
