@@ -78,5 +78,23 @@ function decode(stringSaida) {
   return stringSaida
 }
 
+//EXERCICIO 5
 
-module.exports = { sum, myRemove, myFizzBuzz, encode, decode };
+function techList(arrayTech, name) {
+  arrayTech.sort();
+  if (arrayTech.length === 0) {
+    return "Vazio!"
+  }
+  else if (arrayTech.length !== 0) {    
+    let objetos = [];
+    for (let index in arrayTech) {
+      objetos.push({
+        tech: arrayTech[index],
+        name: name,
+      })
+    }
+    return objetos;
+}
+}
+
+module.exports = { sum, myRemove, myFizzBuzz, encode, decode, techList };
