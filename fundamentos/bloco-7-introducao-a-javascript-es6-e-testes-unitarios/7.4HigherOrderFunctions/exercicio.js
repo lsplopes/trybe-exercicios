@@ -34,3 +34,12 @@ const resultado = (numero, sortfunc) => {
 const sortfunc = () => Math.floor(Math.random() * 5 + 1);
 
 // console.log(resultado(3, sortfunc()));
+
+const checkerfunc = (number, sortido) => number === sortido;
+
+const resultado2 = (number, checkerfuncpar) => {
+  const checker = Math.floor(Math.random() * 5 + 1);
+  return checkerfuncpar(number, checker) ? 'Parabéns você ganhou!' : 'Tente novamente.';;
+}
+
+console.log(resultado2(5, checkerfunc))
