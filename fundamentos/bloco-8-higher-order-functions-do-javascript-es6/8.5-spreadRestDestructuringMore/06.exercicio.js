@@ -9,4 +9,6 @@ const chiron = ['Chiron', 'Bugatti', 2016];
 
 const toObject = ([carro, marca, ano]) => ({carro, marca, ano}) 
 
+//após a => sem o abreviation ficaria { carro: carro, marca: marca, ano: ano }
+
 console.log(toObject(palio));
