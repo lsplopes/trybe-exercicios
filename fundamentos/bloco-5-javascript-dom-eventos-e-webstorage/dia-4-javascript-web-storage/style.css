@@ -1,0 +1,32 @@
+.buttonsSections {
+  display: inline-block;
+  padding: 5px;
+  margin: 10px;
+  vertical-align: middle;
+}
+
+.buttons {
+  border: 2px solid darkblue;
+  text-align: center;
+  background-color: darkslategrey;
+}
+
+.blockButtons {
+  display: block;
+  margin: 2px;
+  width: 100%;
+}
+
+footer {
+  vertical-align: bottom;
+}
+
+header {
+  border: 2px solid darkblue;
+  text-align: center;
+  background-color: darkslategrey;
+}
+
+#cabecaPe {
+  display: block;
+}
