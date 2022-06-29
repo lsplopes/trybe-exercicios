@@ -1,0 +1,61 @@
+body {
+    background-color: rgb(110, 110, 109);
+}
+.header {
+    background-color: lightgreen;
+    border-radius: 10px;
+    border: 3px rgb(84, 87, 139) solid;
+}
+.header h1 {
+    text-align: center;
+}
+.navigation li {
+    display: inline;
+    margin-right: 30px;
+}
+.main-content {
+    background-color: beige;
+    border-radius: 10px;
+    border: 3px rgb(84, 87, 139) solid;
+    width: 74%;
+    display: inline-block;
+}
+.video {
+    display: inline-block;
+    float: right;
+    width: 25%;
+}
+.estevideo {
+    background-color: lightgreen;
+    border-radius: 10px;
+    border: 3px rgb(84, 87, 139) solid;
+    padding: 10px;
+    text-align: center;
+    
+}
+.estafoto {
+    background-color: lightgreen;
+    border-radius: 10px;
+    border: 3px rgb(84, 87, 139) solid;
+    padding: 10px;
+    text-align: center;
+}
+.footer {
+    background-color: lightgreen;
+    border-radius: 10px;
+    border: 3px rgb(84, 87, 139) solid;
+    padding: 10px;
+    clear: both;
+}
+.foto {
+    width: 50%;
+}
+.foto2 {
+    width: 80%;
+}
+h1 {
+    color: darkblue;
+}
+h2 {
+
+}
