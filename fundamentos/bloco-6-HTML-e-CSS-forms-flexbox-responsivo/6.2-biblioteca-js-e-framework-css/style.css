@@ -1,0 +1,16 @@
+body {
+  max-width: 80%;
+  margin: 40px auto;
+  background-color: lightskyblue;
+}
+
+header {
+  border-radius: 10px;
+  background-color: antiquewhite;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  margin: 20px 0 20px 0;
+}
